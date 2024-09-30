@@ -1,0 +1,33 @@
+*{
+    font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4{
+    font-family: "Lilita One", system-ui;
+}
+
+
+:root{
+    --jasper: rgb(191, 78, 48);
+    --gunmetal: rgb(45, 49, 66);
+    --ashGray: rgb(151, 175, 169);
+    --mintGreen: rgb(221, 255, 247);
+}
+
+
+
+.bg-jasper{
+    background-color: var(--jasper);
+}
+
+.bg-gunmetal{
+    background-color: var(--gunmetal);
+}
+
+.bg-ashGray{
+    background-color: var(--ashGray);
+}
+
+.bg-mintGreen{
+    background-color: var(--mintGreen);
+}
