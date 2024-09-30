@@ -36,7 +36,8 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 /* NAVBAR */
 
 .navbar{
-    height: 70px;
+    height: 100px;
+    transition: 0.5s;
 }
 
 .nav-link{
@@ -51,4 +52,10 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 
 .logo{
     width: 50px;
+    transition: 0.5s;
+}
+
+.logoSmall{
+    width: 35px;
+    transition: 0.5s;
 }
