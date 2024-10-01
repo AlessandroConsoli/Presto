@@ -46,8 +46,9 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 }
 
 .nav-link:hover{
-    color: var(--mintGreen);
-    text-shadow: 4px 4px 8px var(--jasper);
+    color: var(--mintGreen) !important;
+    text-shadow: 4px 4px 8px var(--jasper), -2px -2px 8px var(--jasper);
+    transition: 0.7s;
 }
 
 .logo{

@@ -39,3 +39,6 @@ window.addEventListener('scroll', ()=>{
     }
     
 });
+
+
+// arrivato a 50:31:00
