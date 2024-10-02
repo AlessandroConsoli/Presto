@@ -1,21 +1,22 @@
 *{
-    font-family: "Lato", sans-serif;
+    font-family: "Reenie Beanie", cursive;
 }
 
 h1, h2, h3, h4, .h1, .h2, .h3, .h4{
-    font-family: "Lilita One", system-ui;
+    font-family: "Covered By Your Grace", cursive;
 }
 
 
 :root{
     --jasper: rgb(255, 102, 0);
-    --gunmetal: rgb(45, 49, 66);
-    --ashGray: rgb(151, 175, 169);
+    --gunmetal: rgb(23, 23, 23);
+    --ashGray: rgb(165, 161, 160);
     --mintGreen: rgb(221, 255, 247);
 }
 
 
 
+/* Custom bg colors */
 .bg-jasper{
     background-color: var(--jasper);
 }
@@ -33,6 +34,26 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 }
 
 
+/* Custom Text Colors */
+.text-jasper{
+    color: var(--jasper);
+}
+
+.text-gunmetal{
+    color: var(--gunmetal);
+}
+
+.text-ashGray{
+    color: var(--ashGray);
+}
+
+.text-mintGreen{
+    color: var(--mintGreen);
+}
+
+
+
+
 /* NAVBAR */
 
 .navbar{
@@ -40,9 +61,21 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
     transition: 0.5s;
 }
 
+.navbar-toggler{
+    border: 3px solid var(--ashGray);
+    background-color: var(--jasper);
+}
+
+.navbar-toggler:hover{
+    background-color: var(--ashGray);
+    border-color: var(--mintGreen);
+    transition: 0.5s;
+}
+
 .nav-link{
     color: var(--jasper);
     font-weight: 700;
+    font-size: 30px;
 }
 
 .nav-link:hover{
@@ -59,4 +92,55 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 .logoSmall{
     width: 35px;
     transition: 0.5s;
+}
+
+
+/* Header */
+
+.header{
+    background-image: url(./Media/pos-panther-art2.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.btn-custom{
+    color: var(--gunmetal);
+    background-color: var(--ashGray);
+    border: 2px solid var(--gunmetal);
+    border-radius: 40px;
+    margin: 0px 15px;
+    width: 200px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.btn-custom:hover{
+    color: var(--mintGreen);
+    text-shadow: 4px 4px 8px var(--jasper), -2px -2px 8px var(--jasper);
+    background-color: var(--ashGray);
+    border: 2px solid var(--mintGreen);
+    transform: scale(1.2);
+}
+
+/* 3 Coloumn section */
+
+.positioned{
+    position: relative;
+    top: -150px;
+}
+
+.col-custom{
+    padding: 10px;
+    border: 1px solid var(--ashGray);
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.col-custom:hover{
+    transform: scale(1.1);
+    background-color: var(--ashGray);
+    color: var(--mintGreen);
+    text-shadow: 4px 4px 8px var(--jasper), -2px -2px 8px var(--jasper);
+    border: 2px solid var(--mintGreen);
 }
