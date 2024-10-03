@@ -3,6 +3,7 @@ let links = document.querySelectorAll('.nav-link');
 let logoNavbar = document.querySelector('#logoNavbar');
 let logoWidth = document.querySelectorAll('.logo');
 let logoPanther = document.querySelector('#logoPanther');
+let collapse = document.querySelector('#collapse')
 let check = false;
 
 
@@ -16,6 +17,8 @@ window.addEventListener('scroll', ()=>{
     if (scrolled > 0) {
         navbar.classList.remove('bg-gunmetal');
         navbar.classList.add('bg-ashGray');
+        collapse.classList.remove('bg-gunmetal');
+        collapse.classList.add('bg-ashGray');
         navbar.style.height= '70px';
         links.forEach( (link)=> {
             link.style.color= 'var(--gunmetal)';
@@ -30,6 +33,8 @@ window.addEventListener('scroll', ()=>{
     }else{
         navbar.classList.remove('bg-ashGray');
         navbar.classList.add('bg-gunmetal');
+        collapse.classList.remove('bg-ashGray');
+        collapse.classList.add('bg-gunmetal');
         navbar.style.height= '100px';
         links.forEach( (link)=> {
             link.style.color= 'var(--jasper)';

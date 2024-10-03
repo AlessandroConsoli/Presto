@@ -159,9 +159,9 @@ body{
 
 /* Media queries */
 
-@media screen and (max-width: 992px){
-    .nav-link{
-        color: var(--jasper) !important;
+@media screen and (min-width: 992px){
+    .logo-panther{
+        display: none;
     }
 }
 
@@ -171,9 +171,9 @@ body{
         position: static;
     }
 
-    .nav-link{
+    /* .nav-link{
         color: var(--jasper) !important;
-    }
+    } */
 
     .btn-custom{
         color: var(--gunmetal);
