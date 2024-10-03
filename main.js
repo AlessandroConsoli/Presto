@@ -2,8 +2,10 @@ let navbar = document.querySelector('.navbar');
 let links = document.querySelectorAll('.nav-link');
 let logoNavbar = document.querySelector('#logoNavbar');
 let logoWidth = document.querySelectorAll('.logo');
+let logoPanther = document.querySelector('#logoPanther');
+let check = false;
 
-console.log(logoWidth);
+
 
 
 
@@ -19,6 +21,7 @@ window.addEventListener('scroll', ()=>{
             link.style.color= 'var(--gunmetal)';
         })
         logoNavbar.src= 'http://127.0.0.1:5500/Media/logo%20gunMetal.png';
+        logoPanther.src= 'http://127.0.0.1:5500/Media/panther%20logo%202.png'
         logoWidth.forEach( (dir) =>{
             dir.classList.remove('logo');
             dir.classList.add('logoSmall');
@@ -32,6 +35,7 @@ window.addEventListener('scroll', ()=>{
             link.style.color= 'var(--jasper)';
         })
         logoNavbar.src= 'http://127.0.0.1:5500/Media/logo%20jasper.png'
+        logoPanther.src= 'http://127.0.0.1:5500/Media/panther%20logo%201.png'
         logoWidth.forEach( (dir) =>{
             dir.classList.remove('logoSmall');
             dir.classList.add('logo');
@@ -40,5 +44,15 @@ window.addEventListener('scroll', ()=>{
     
 });
 
+logoPanther.addEventListener('click', ()=>{
+    if (check == false) {
+        logoPanther.src= 'http://127.0.0.1:5500/Media/Rage%20panther%20logo%20jasper%20left.png'
+        check = true;
+    }else{
+        logoPanther.src= 'http://127.0.0.1:5500/Media/panther%20logo%201.png'
+        check = false;
+    }
+});
 
-// arrivato a 50:31:00
+
+// arrivato a 01:13:40

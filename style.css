@@ -94,6 +94,17 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
     transition: 0.5s;
 }
 
+.logo-panther{
+    width: 50px;
+    transition: 0.5s;
+}
+
+.collapsed{
+    transition: 0.5s;
+}
+
+
+
 
 /* Header */
 
@@ -143,4 +154,38 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
     color: var(--mintGreen);
     text-shadow: 4px 4px 8px var(--jasper), -2px -2px 8px var(--jasper);
     border: 2px solid var(--mintGreen);
+}
+
+
+
+/* Media queries */
+@media screen and (max-width: 600px){
+
+    .positioned{
+        position: static;
+    }
+
+    .nav-link{
+        color: var(--jasper) !important;
+    }
+
+    .btn-custom{
+        color: var(--gunmetal);
+        background-color: var(--ashGray);
+        border: 2px solid var(--gunmetal);
+        border-radius: 20px;
+        margin: 0px 15px;
+        width: 200px;
+        font-size: 15px;
+        transition: 0.5s;
+    };
+
+    .btn-custom:hover{
+        color: var(--mintGreen);
+        text-shadow: 4px 4px 8px var(--jasper), -2px -2px 8px var(--jasper);
+        background-color: var(--ashGray);
+        border: 2px solid var(--mintGreen);
+        transform: none;
+    };
+
 }
