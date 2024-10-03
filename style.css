@@ -51,7 +51,9 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
     color: var(--mintGreen);
 }
 
-
+body{
+    background-color: var(--gunmetal);
+}
 
 
 /* NAVBAR */
@@ -96,12 +98,9 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 
 .logo-panther{
     width: 50px;
-    transition: 0.5s;
 }
 
-.collapsed{
-    transition: 0.5s;
-}
+
 
 
 
@@ -159,6 +158,13 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 
 
 /* Media queries */
+
+@media screen and (max-width: 992px){
+    .nav-link{
+        color: var(--jasper) !important;
+    }
+}
+
 @media screen and (max-width: 600px){
 
     .positioned{

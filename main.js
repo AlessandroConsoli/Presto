@@ -45,14 +45,24 @@ window.addEventListener('scroll', ()=>{
 });
 
 logoPanther.addEventListener('click', ()=>{
-    if (check == false) {
-        logoPanther.src= 'http://127.0.0.1:5500/Media/Rage%20panther%20logo%20jasper%20left.png'
-        check = true;
-    }else{
+    if (logoPanther.src== 'http://127.0.0.1:5500/Media/Rage%20panther%20logo%20jasper%20left.png') {
         logoPanther.src= 'http://127.0.0.1:5500/Media/panther%20logo%201.png'
-        check = false;
-    }
+    }else if (logoPanther.src== 'http://127.0.0.1:5500/Media/panther%20logo%201.png') {
+        logoPanther.src= 'http://127.0.0.1:5500/Media/Rage%20panther%20logo%20jasper%20left.png'
+    }else if (logoPanther.src== 'http://127.0.0.1:5500/Media/panther%20logo%202.png') {
+        logoPanther.src= 'http://127.0.0.1:5500/Media/Rage%20panther%20logo%20jasper%20left%202.png'
+    }else if (logoPanther.src== 'http://127.0.0.1:5500/Media/Rage%20panther%20logo%20jasper%20left%202.png') {
+        logoPanther.src= 'http://127.0.0.1:5500/Media/panther%20logo%202.png'
+    }     
 });
 
 
-// arrivato a 01:13:40
+
+
+
+// logo scuro bocca aperta
+// logoPanther.src= 'http://127.0.0.1:5500/Media/Rage%20panther%20logo%20jasper%20left%202.png'
+
+// logo scuro bocca chiusa
+// logoPanther.src= 'http://127.0.0.1:5500/Media/panther%20logo%202.png'
+
