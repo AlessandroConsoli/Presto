@@ -13,7 +13,7 @@ let check = false;
 
 window.addEventListener('scroll', ()=>{
     let scrolled = window.scrollY;
-
+    
     if (scrolled > 0) {
         navbar.classList.remove('bg-gunmetal');
         navbar.classList.add('bg-ashGray');
@@ -24,7 +24,7 @@ window.addEventListener('scroll', ()=>{
             link.style.color= 'var(--gunmetal)';
         })
         logoNavbar.src= 'http://127.0.0.1:5500/Media/logo%20gunMetal.png';
-        logoPanther.src= 'http://127.0.0.1:5500/Media/panther%20logo%202.png'
+        logoPanther.src= 'http://127.0.0.1:5500/Media/panther%20logo%202.png';
         logoWidth.forEach( (dir) =>{
             dir.classList.remove('logo');
             dir.classList.add('logoSmall');
@@ -61,13 +61,61 @@ logoPanther.addEventListener('click', ()=>{
     }     
 });
 
-
-
-
-
 // logo scuro bocca aperta
 // logoPanther.src= 'http://127.0.0.1:5500/Media/Rage%20panther%20logo%20jasper%20left%202.png'
 
 // logo scuro bocca chiusa
 // logoPanther.src= 'http://127.0.0.1:5500/Media/panther%20logo%202.png'
 
+
+
+// Chiamate Asincrone
+
+let firstNumber = document.querySelector('#firstNumber');
+let secondNumber = document.querySelector('#secondNumber');
+let thirdNumber = document.querySelector('#thirdNumber');
+
+let confirm = true;
+
+function createInterval(n, element, time) {
+    let counter = 0;
+    
+    let interval = setInterval( () => {
+        if (counter < n) {
+            counter++
+            element.innerHTML = counter;
+        }else{
+            clearInterval(interval);
+        }
+        
+    }, time);
+
+    setTimeout(() => {
+        confirm = true;
+    }, 5000);
+
+}
+
+
+
+
+let observer = new IntersectionObserver( (entries)=>{
+    entries.forEach( (entry)=> {
+        if (entry.isIntersecting && confirm) {
+            createInterval(100, firstNumber, 10);
+            createInterval(15, secondNumber, 100);
+            createInterval(250, thirdNumber, 1);
+            confirm = false;
+        }
+    });
+} );
+
+observer.observe(firstNumber);
+
+
+
+
+
+
+
+// 02:26:30

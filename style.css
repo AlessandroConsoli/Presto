@@ -2,7 +2,7 @@
     font-family: "Reenie Beanie", cursive;
 }
 
-h1, h2, h3, h4, .h1, .h2, .h3, .h4{
+h1, h2, h3, .h1, .h2, .h3{
     font-family: "Covered By Your Grace", cursive;
 }
 
@@ -58,9 +58,13 @@ body{
 
 /* NAVBAR */
 
+#collapse{
+    transition: 1s;
+}
+
 .navbar{
     height: 100px;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .navbar-toggler{
@@ -98,8 +102,15 @@ body{
 
 .logo-panther{
     width: 50px;
+    transition: 1s;
 }
 
+.logo-panther2{
+    width: 51px;
+    transition: 1s;
+}
+
+/* NAVBAR END */
 
 
 
@@ -133,6 +144,11 @@ body{
     transform: scale(1.2);
 }
 
+/* Header END */
+
+
+
+
 /* 3 Coloumn section */
 
 .positioned{
@@ -155,6 +171,27 @@ body{
     border: 2px solid var(--mintGreen);
 }
 
+/* 3 Coloumn section END */
+
+
+
+
+/* Sezione Numeri Incrementali */
+
+.Times-New-Roman{
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.numbers{
+    font-size: 80px;
+    font-weight: 900;
+}
+
+/* Sezione Numeri Incrementali END */
+
+
+
 
 
 /* Media queries */
@@ -168,7 +205,9 @@ body{
 @media screen and (max-width: 600px){
 
     .positioned{
-        position: static;
+        position: relative;
+        top: -150px;
+        transition: 0.7s;
     }
 
     /* .nav-link{
@@ -182,7 +221,7 @@ body{
         border-radius: 20px;
         margin: 0px 15px;
         width: 200px;
-        font-size: 15px;
+        font-size: 16px;
         transition: 0.5s;
     };
 
@@ -194,4 +233,29 @@ body{
         transform: none;
     };
 
+    .header{
+        background-size: contain;
+        position: relative;
+        top: -100px;
+        background-image: url(./Media/POS-Panther-AlbumCover-Web.webp);
+    }
+
+    
+
+    .h1-custom{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 460px){
+    .h1-custom{
+        display: none;
+    }
+
+    .positioned{
+        position: relative;
+        top: -250px;
+        transition: 0.7s;
+    }
 }
