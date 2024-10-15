@@ -6,6 +6,16 @@ h1, h2, h3, .h1, .h2, .h3{
     font-family: "Covered By Your Grace", cursive;
 }
 
+.Times-New-Roman{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.oswald-custom{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
 
 :root{
     --jasper: rgb(255, 102, 0);
@@ -182,10 +192,6 @@ body{
 
 /* Sezione Numeri Incrementali */
 
-.Times-New-Roman{
-    font-family: 'Times New Roman', Times, serif;
-    
-}
 
 .numbers{
     font-size: 80px;
@@ -286,4 +292,26 @@ body{
     .swiper{
         height: 300px;
     }
+}
+
+
+/* PAGINA ANNUNCI */
+
+.accordion-button{
+    font-size: 25px;
+}
+
+.accordion-item, .accordion-button{
+    background-color: var(--gunmetal);
+    color: var(--ashGray);
+}
+
+.accordion-button:not(.collapsed){
+    color: var(--jasper);
+    background-color: var(--gunmetal);
+    box-shadow: none;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
 }
