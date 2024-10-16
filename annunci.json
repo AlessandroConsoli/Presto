@@ -1,0 +1,182 @@
+[
+    {
+      "id": 1,
+      "name": "Essence Mascara Lash Princess",
+      "category": "beauty",
+      "price": "9.99"
+    },
+    { 
+      "id": 2,
+      "name": "Eyeshadow Palette with Mirror",
+      "category": "beauty",
+      "price": 19.99
+    },
+    {
+      "id": 3,
+      "name": "Powder Canister",
+      "category": "beauty",
+      "price": 14.99
+    },  
+    {
+      "id": 4,
+      "name": "Red Lipstick",
+      "category": "beauty",
+      "price": 12.99
+    },
+    {
+      "id": 5,
+      "name": "Red Nail Polish",
+      "category": "beauty",
+      "price": 8.99
+    },
+    {
+      "id": 6,
+      "name": "Calvin Klein CK One",
+      "category": "fragrances",
+      "price": 49.99
+    },
+    {
+      "id": 7,
+      "name": "Chanel Coco Noir Eau De",
+      "category": "fragrances",
+      "price": 129.99
+    },
+    {
+      "id": 8,
+      "name": "Dior J'adore",
+      "category": "fragrances",
+      "price": 89.99
+    },
+    {
+      "id": 9,
+      "name": "Dolce Shine Eau de",
+      "category": "fragrances",
+      "price": 69.99
+    },
+    {
+      "id": 10,
+      "name": "Gucci Bloom Eau de",
+      "category": "fragrances",
+      "price": 79.99
+    },
+    {
+      "id": 11,
+      "name": "Annibale Colombo Bed",
+      "category": "furniture",
+      "price": 1899.99
+    },
+    {
+      "id": 12,
+      "name": "Annibale Colombo Sofa",
+      "category": "furniture",
+      "price": 2499.99
+    },
+    {
+      "id": 13,
+      "name": "Bedside Table African Cherry",
+      "category": "furniture",
+      "price": 299.99
+    },
+    {
+      "id": 14,
+      "name": "Knoll Saarinen Executive Conference Chair",
+      "category": "furniture",
+      "price": 499.99
+    },
+    {
+      "id": 15,
+      "name": "Wooden Bathroom Sink With Mirror",
+      "category": "furniture",
+      "price": 799.99
+    },
+    {
+      "id": 16,
+      "name": "Apple",
+      "category": "groceries",
+      "price": 1.99
+    },
+    {
+      "id": 17,
+      "name": "Beef Steak",
+      "category": "groceries",
+      "price": 12.99
+    },
+    {
+      "id": 18,
+      "name": "Cat Food",
+      "category": "groceries",
+      "price": 8.99
+    },
+    {
+      "id": 19,
+      "name": "Chicken Meat",
+      "category": "groceries",
+      "price": 9.99
+    },
+    {
+      "id": 20,
+      "name": "Cooking Oil",
+      "category": "groceries",
+      "price": 4.99
+    },
+    {
+      "id": 21,
+      "name": "Cucumber",
+      "category": "groceries",
+      "price": 1.49
+    },
+    {
+      "id": 22,
+      "name": "Dog Food",
+      "category": "groceries",
+      "price": 10.99
+    },
+    {
+      "id": 23,
+      "name": "Eggs",
+      "category": "groceries",
+      "price": 2.99
+    },
+    {
+      "id": 24,
+      "name": "Fish Steak",
+      "category": "groceries",
+      "price": 14.99
+    },
+    {
+      "id": 25,
+      "name": "Green Bell Pepper",
+      "category": "groceries",
+      "price": 1.29
+    },
+    {
+      "id": 26,
+      "name": "Green Chili Pepper",
+      "category": "groceries",
+      "price": 0.99
+    },
+    {
+      "id": 27,
+      "name": "Honey Jar",
+      "category": "groceries",
+      "price": 6.99
+    },
+    {
+      "id": 28,
+      "name": "Ice Cream",
+      "category": "groceries",
+      "price": 5.49
+    },
+    {
+      "id": 29,
+      "name": "Juice",
+      "category": "groceries",
+      "price": 3.99
+    },
+    {
+      "id": 30,
+      "name": "Kiwi",
+      "category": "groceries",
+      "price": 2.49
+    }
+]
