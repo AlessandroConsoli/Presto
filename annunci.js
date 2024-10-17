@@ -47,24 +47,44 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
     }
 
 
-    function showCards(){
-        data.forEach( (annuncio, i)=>{
+    function showCards(array){
+        cardWrapper.innerHTML = '';
+        array.forEach( (annuncio, i)=>{
             let div = document.createElement('div');
             div.classList.add('card-custom');
             div.innerHTML = `
                 <img src="https://picsum.photos/${300 + i}" alt="immagine casuale" class="img-fluid img-card">
                 <p class="h3 text-jasper" title="${annuncio.name}">${cutStrings(annuncio.name)}</p>
-                <p class="h5 roboto-mono-">${annuncio.category}</p>
+                <p class="h6 roboto-mono-">${annuncio.category}</p>
                 <p class="h6 roboto-mono- text-jasper">${annuncio.price}€</p>
             `;
             cardWrapper.appendChild(div);
         })
     }
 
-    showCards();
+    showCards(data);
 
 
+    function filterByCategory(categoria) {
 
+        if (categoria != 'All') {
+            
+            let filtered = data.filter( (annuncio)=> annuncio.category == categoria);
+            showCards(filtered);
+        }else{
+            showCards(data);
+        }
+        
+    }
+
+
+    let radioButtons = document.querySelectorAll('.form-check-input');
+
+    radioButtons.forEach( (button)=> {
+        button.addEventListener('click', ()=> {
+            filterByCategory(button.id);
+        })
+    });
     
 })
 
