@@ -12,6 +12,7 @@ logoPanther.addEventListener('click', ()=>{
 fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
     
     let radioWrapper = document.querySelector('#radioWrapper');
+    let cardWrapper = document.querySelector('#cardWrapper');
 
     function radioCreate(){
         let categories = data.map( (annuncio)=> annuncio.category );
@@ -36,6 +37,34 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
     }
 
     radioCreate();
+
+    function cutStrings(string){
+        if (string.length > 15){
+            return string.split(' ')[0] + '...';
+        }else{
+            return string;
+        }
+    }
+
+
+    function showCards(){
+        data.forEach( (annuncio, i)=>{
+            let div = document.createElement('div');
+            div.classList.add('card-custom');
+            div.innerHTML = `
+                <img src="https://picsum.photos/${300 + i}" alt="immagine casuale" class="img-fluid img-card">
+                <p class="h3 text-jasper" title="${annuncio.name}">${cutStrings(annuncio.name)}</p>
+                <p class="h5 roboto-mono-">${annuncio.category}</p>
+                <p class="h6 roboto-mono- text-jasper">${annuncio.price}€</p>
+            `;
+            cardWrapper.appendChild(div);
+        })
+    }
+
+    showCards();
+
+
+
     
 })
 

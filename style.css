@@ -6,6 +6,11 @@ h1, h2, h3, .h1, .h2, .h3{
     font-family: "Covered By Your Grace", cursive;
 }
 
+.roboto-mono-{
+    font-family: "Roboto Mono", monospace;
+    font-style: normal;
+  }
+
 .Times-New-Roman{
     font-family: 'Times New Roman', Times, serif;
 }
@@ -317,12 +322,18 @@ body{
 }
 
 .card-custom{
-    height: 200px;
     width: 30%;
     border: 2px solid var(--mintGreen);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+.img-card{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
