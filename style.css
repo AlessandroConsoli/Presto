@@ -302,13 +302,19 @@ body{
 
 /* PAGINA ANNUNCI */
 
+.accordion{
+    border: 1px solid var(--mintGreen);
+    margin-bottom: 25px;
+    --bs-accordion-border-radius: none;
+}
+
 .accordion-button{
     font-size: 25px;
 }
 
 .accordion-item, .accordion-button{
     background-color: var(--gunmetal);
-    color: var(--ashGray);
+    color: var(--mintGreen);
 }
 
 .accordion-button:not(.collapsed){

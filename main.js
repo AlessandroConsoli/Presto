@@ -133,7 +133,7 @@ reviews.forEach( (recensione)=>{
     div.classList.add('swiper-slide');
     div.innerHTML = `
         <div class="card-review">
-            <p class="lead2 text-center">${recensione.description}</p>
+            <p class="lead2 text-center roboto-mono-">${recensione.description}</p>
             <p class="h4 Times-New-Roman">${recensione.user}</p>
             <div class="d-flex justify-content-center star">
 
@@ -145,7 +145,7 @@ reviews.forEach( (recensione)=>{
 
 let stars = document.querySelectorAll('.star');
 
-// <i class="fa-solid fa-star"></i>
+// <i class="fa-solid fa-star"></i>  
 
 stars.forEach( (star, index)=>{
 

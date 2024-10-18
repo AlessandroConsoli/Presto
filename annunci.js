@@ -10,6 +10,7 @@ logoPanther.addEventListener('click', ()=>{
 
 
 fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
+    data.sort( (a, b)=> a.price - b.price );
     
     let radioWrapper = document.querySelector('#radioWrapper');
     let cardWrapper = document.querySelector('#cardWrapper');
@@ -24,7 +25,6 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
             let div = document.createElement('div');
             div.classList.add('form-check');
             div.innerHTML = `
-            
             <input class="form-check-input" type="radio" name="categories" id="${category}">
             <label class="form-check-label oswald-custom text-jasper" for="${category}">
                 ${category}
@@ -55,7 +55,7 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
             div.innerHTML = `
                 <img src="https://picsum.photos/${300 + i}" alt="immagine casuale" class="img-fluid img-card">
                 <p class="h3 text-jasper" title="${annuncio.name}">${cutStrings(annuncio.name)}</p>
-                <p class="h6 roboto-mono-">${annuncio.category}</p>
+                <p class="h6 roboto-mono- text-mintGreen">${annuncio.category}</p>
                 <p class="h6 roboto-mono- text-jasper">${annuncio.price}€</p>
             `;
             cardWrapper.appendChild(div);
@@ -85,7 +85,45 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
             filterByCategory(button.id);
         })
     });
-    
-})
 
-// 00:59:00
+    let priceInput = document.querySelector('#priceInput');
+    let priceValue = document.querySelector('#priceValue');
+
+    function setPriceInput() {
+        let prices = data.map( (annuncio)=> +annuncio.price );    
+        // oppure Number(annuncio.price) al posto di +annuncio.price
+        prices.sort( (a, b)=> a - b);
+        let maxPrice = Math.ceil(prices.pop());
+        priceInput.max = maxPrice;
+        priceInput.value = maxPrice;
+        priceValue.innerHTML = maxPrice;
+        
+        
+    }
+    setPriceInput();
+
+
+    function filterByPrice() {
+        let filtered = data.filter( (annuncio)=> Number(annuncio.price) <= priceInput.value );
+        showCards(filtered);
+    }
+
+    priceInput.addEventListener( 'input', ()=> {
+        priceValue.innerHTML = priceInput.value;
+        filterByPrice();
+    })
+
+
+    let wordInput = document.querySelector('#wordInput');
+
+    function filterByWord(parola) {
+        let filtered = data.filter( (annuncio)=> annuncio.name.toLowerCase().includes(parola.toLowerCase()));
+        showCards(filtered);
+    }
+
+    wordInput.addEventListener('input', ()=>{
+        filterByWord(wordInput.value);
+    })
+
+});
+
