@@ -4,6 +4,7 @@
 
 h1, h2, h3, .h1, .h2, .h3{
     font-family: "Covered By Your Grace", cursive;
+    color: var(--mintGreen);
 }
 
 .roboto-mono-{
@@ -26,7 +27,7 @@ h1, h2, h3, .h1, .h2, .h3{
     --jasper: rgb(255, 102, 0);
     --gunmetal: rgb(23, 23, 23);
     --ashGray: rgb(165, 161, 160);
-    --mintGreen: rgb(221, 255, 247);
+    --mintGreen: rgb(251, 251, 251);
 }
 
 
@@ -239,6 +240,144 @@ body{
 
 
 
+
+/* PAGINA ANNUNCI */
+
+.accordion{
+    border: 1px solid var(--mintGreen);
+    margin-bottom: 25px;
+    --bs-accordion-border-radius: none;
+}
+
+.accordion-button{
+    font-size: 25px;
+}
+
+.accordion-item, .accordion-button{
+    background-color: var(--gunmetal);
+    color: var(--mintGreen);
+}
+
+.accordion-button:not(.collapsed){
+    color: var(--jasper);
+    background-color: var(--gunmetal);
+    box-shadow: none;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+}
+
+.card-custom{
+    width: 30%;
+    border: 2px solid var(--mintGreen);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+.img-card{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+/* Pagina About Us */
+
+.circle{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 3px solid var(--jasper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.opener{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 2px solid var(--mintGreen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 3;
+    background-color: var(--gunmetal);
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+.moved{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 2px solid var(--mintGreen);
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+    z-index: 2;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.vh-custom{
+    height: 75vh;
+}
+
+.flip-card{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card:hover > .inner{
+    transform: rotateY(180deg);
+}
+
+.inner{
+    height: 404px;
+    width: 405px;
+    border: 2px solid var(--jasper);
+    border-radius: 20px;
+    position: relative;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.inner-face{
+    height: 400px;
+    width: 400px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+.inner-back{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 15px;
+}
+
+/* Pagina About Us END */
+
 /* Media queries */
 
 @media screen and (min-width: 992px){
@@ -297,49 +436,47 @@ body{
     .swiper{
         height: 300px;
     }
-}
+
+    /* About Us */
+
+    .circle{
+        margin-top: 80px;
+        height: 200px;
+        width: 200px;
+    }
+
+    .moved{
+        height: 55px;
+        width: 55px;
+    }
 
 
-/* PAGINA ANNUNCI */
+    .inner{
+        height: 304px;
+        width: 305px;
+        margin-top: 200px;
 
-.accordion{
-    border: 1px solid var(--mintGreen);
-    margin-bottom: 25px;
-    --bs-accordion-border-radius: none;
-}
+    }
+    
+    .inner-face{
+        height: 300px;
+        width: 300px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        backface-visibility: hidden;
+        border-radius: 20px;
+    }
+    
+    .inner-back{
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        text-align: center;
+        padding: 15px;
+    }
 
-.accordion-button{
-    font-size: 25px;
-}
-
-.accordion-item, .accordion-button{
-    background-color: var(--gunmetal);
-    color: var(--mintGreen);
-}
-
-.accordion-button:not(.collapsed){
-    color: var(--jasper);
-    background-color: var(--gunmetal);
-    box-shadow: none;
-}
-
-.accordion-button:focus{
-    box-shadow: none;
-}
-
-.card-custom{
-    width: 30%;
-    border: 2px solid var(--mintGreen);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-evenly;
-    margin-bottom: 25px;
-}
-
-.img-card{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 }
