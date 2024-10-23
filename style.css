@@ -164,6 +164,10 @@ body{
     transform: scale(1.2);
 }
 
+.subtitle{
+    font-size: 20px;
+}
+
 /* Header END */
 
 
@@ -176,19 +180,43 @@ body{
     top: -150px;
 }
 
+.first-col{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./Media/POS-Panther-AlbumCover-Web.webp);
+}
+
+.second-col{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./Media/passing\ light.webp);
+}
+
+.third-col{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./Media/Pain-Of-Salvation-Falling-Home.jpg);
+}
+
 .col-custom{
     padding: 10px;
     border: 1px solid var(--ashGray);
     cursor: pointer;
     transition: 0.7s;
-}
+    height: 450px;
+    font-size: 0px;
+    }
 
 .col-custom:hover{
-    transform: scale(1.1);
-    background-color: var(--ashGray);
-    color: var(--mintGreen);
-    text-shadow: 4px 4px 8px var(--jasper), -2px -2px 8px var(--jasper);
-    border: 2px solid var(--mintGreen);
+    transform: scale(1.2);
+    color: var(--jasper);
+    text-shadow: 4px 4px 8px var(--mintGreen), -2px -2px 8px var(--mintGreen);
+    border: 2px solid var(--jasper);
+    font-size: 150px;
+    text-align: end;
 }
 
 /* 3 Coloumn section END */
@@ -249,6 +277,16 @@ body{
     --bs-accordion-border-radius: none;
 }
 
+
+.sticky-top{
+    top: 100px;
+}
+
+.mt-custom{
+    margin-top: 100px;
+}
+
+
 .accordion-button{
     font-size: 25px;
 }
@@ -267,6 +305,11 @@ body{
 .accordion-button:focus{
     box-shadow: none;
 }
+
+.custom-input{
+    width: 300px;
+}
+
 
 .card-custom{
     width: 30%;
@@ -335,7 +378,7 @@ body{
 
 .flip-card{
     height: 400px;
-    width: 400px;
+    width: 405px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -376,17 +419,56 @@ body{
     padding: 15px;
 }
 
+.fs-80{
+    font-size: 80px;
+}
+
+.fs-30{
+    font-size: 30px;
+}
+
 /* Pagina About Us END */
 
 /* Media queries */
+
+@media screen and (max-width: 1400px){
+    .first-col{
+        height: 450px;
+        width: 450px;
+    }
+    
+    .second-col{
+        height: 450px;
+        width: 450px;
+    }
+    
+    .third-col{
+        height: 450px;
+        width: 450px;
+    }
+}
 
 @media screen and (min-width: 992px){
     .logo-panther{
         display: none;
     }
+
+/* pag Annunci */
+
+    @media screen and (max-width: 991px){
+
+        .input{
+            width: 120px;
+        }
+    }
+
+
+/* pag Annunci END */
+
+
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
 
     .btn-custom{
         color: var(--gunmetal);
@@ -411,6 +493,7 @@ body{
         background-size: contain;
         background-image: url(./Media/POS-Panther-AlbumCover-Web.webp);
         margin-top: 50px;
+        margin-bottom: 180px;
     }
 
     .vh-custom{
@@ -421,12 +504,59 @@ body{
         display: none;
     }
 
+
+
+
+/* about Us */
+
+    .circle{
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+
+
+
+
 }
 
 @media screen and (max-width: 460px){
+
+    .header{
+        margin-bottom: 0px;
+    }
+
+
     .h1-custom{
         display: none;
     }
+
+
+
+
+    .first-col{
+        height: 300px;
+        width: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .second-col{
+        height: 300px;
+        width: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .third-col{
+        height: 300px;
+        width: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+
 
     .positioned{
         position: static;
@@ -437,10 +567,13 @@ body{
         height: 300px;
     }
 
-    /* About Us */
+
+
+/* About Us */
 
     .circle{
-        margin-top: 80px;
+        margin-top: 220px;
+        margin-bottom: 100px;
         height: 200px;
         width: 200px;
     }
@@ -454,8 +587,6 @@ body{
     .inner{
         height: 304px;
         width: 305px;
-        margin-top: 200px;
-
     }
     
     .inner-face{
@@ -478,5 +609,6 @@ body{
         text-align: center;
         padding: 15px;
     }
+
 
 }

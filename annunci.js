@@ -1,14 +1,3 @@
-let logoPanther = document.querySelector('#logoPanther');
-
-logoPanther.addEventListener('click', ()=>{
-    if (logoPanther.src== 'http://127.0.0.1:5500/Media/Rage%20panther%20logo%20jasper%20left.png') {
-        logoPanther.src= 'http://127.0.0.1:5500/Media/panther%20logo%201.png'
-    }else if (logoPanther.src== 'http://127.0.0.1:5500/Media/panther%20logo%201.png') {
-        logoPanther.src= 'http://127.0.0.1:5500/Media/Rage%20panther%20logo%20jasper%20left.png'
-    }    
-});
-
-
 fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
     data.sort( (a, b)=> a.price - b.price );
     
